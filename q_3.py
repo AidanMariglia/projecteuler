@@ -1,19 +1,18 @@
-def isPrime(n):
-    for i in range(2, int(n/2)):
-        if n % i == 0:
-            return False
+def prime_factors(n):
+    res = []
+    d = 2
 
-    return True
+    while n > 1:
+        while n % d == 0:
+            res.append(d)
+            n /= d
+        d += 1
+
+    return res
 
 def compute():
     N = 600851475143
-    is_prime = [True for i in range(2, int(N/2))]
-
-    if isPrime(N):
-        return N
-
-    for p in v:
-        if is_prime
+    return max(prime_factors(N))
 
 if __name__=="__main__":
     print(compute())
